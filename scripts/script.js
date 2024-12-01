@@ -6,26 +6,28 @@ themeButtons.forEach((button) => {
       btn.classList.remove('header__theme-menu-button_active');
       btn.removeAttribute('disabled');
     });
-    if (
-      [...button.classList].includes('header__theme-menu-button_type_light')
-    ) {
-      changeTheme('light');
-    } else if (
-      [...button.classList].includes('header__theme-menu-button_type_dark')
-    ) {
-      changeTheme('dark');
+
+    let theme = '';
+    if (button.classList.contains('header__theme-menu-button_type_light')) {
+      theme = 'light';
+    } else if (button.classList.contains('header__theme-menu-button_type_dark')) {
+      theme = 'dark';
     } else {
-      changeTheme('auto');
+      theme = 'auto';
     }
+
+    changeTheme(theme);
+
     button.classList.add('header__theme-menu-button_active');
     button.setAttribute('disabled', true);
   });
 });
 
 function changeTheme(theme) {
-  document.body.className = 'page';
-  document.body.classList.add(`theme_${theme}`);
-  localStorage.setItem('theme', theme);
+  document.body.className = 'page'; // Сбрасываем все классы и применяем базовый
+  document.body.classList.add(`theme_${theme}`); // Добавляем соответствующую тему
+
+  localStorage.setItem('theme', theme); // Сохраняем тему в localStorage
 }
 
 function initTheme() {
@@ -36,6 +38,7 @@ function initTheme() {
       btn.classList.remove('header__theme-menu-button_active');
       btn.removeAttribute('disabled');
     });
+    // Устанавливаем активную кнопку в зависимости от сохранённой темы
     document
       .querySelector(`.header__theme-menu-button_type_${theme}`)
       .classList.add('header__theme-menu-button_active');
@@ -45,4 +48,4 @@ function initTheme() {
   }
 }
 
-initTheme();
+initTheme(); // Инициализация темы при загрузке страницы
