@@ -1,6 +1,29 @@
-/* Дополнительные стили для тёмной темы */
 .page.theme_dark {
-  background-image: url('../images/cover-image-dark.png');
-  background-size: cover;
-  background-position: center;
+  --accent-clr: #ff0070;
+  --accent-clr-with-background: #000028;
+  --accent-heading-clr: #db00ff;
+  --text-clr: #f1b2ce;
+  --button-hover-clr: #ff007066;
+  --heading-clr: #ff0070;
+  --decorative-bracket-clr: #ff0070;
+  --menu-clr: #ff0070;
+  --headers-clr: #ff0070;
+  --rec-decoration-clr: #ff0070;
+  --cover-image: url(../images/cover-image-dark.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-clr: #ff0070;
+    --accent-clr-with-background: #000028;
+    --accent-heading-clr: #db00ff;
+    --text-clr: #f1b2ce;
+    --button-hover-clr: #ff007066;
+    --heading-clr: #ff0070;
+    --decorative-bracket-clr: #ff0070;
+    --menu-clr: #ff0070;
+    --headers-clr: #ff0070;
+    --rec-decoration-clr: #ff0070;
+    --cover-image: url(../images/cover-image-dark.png);
+  }
 }

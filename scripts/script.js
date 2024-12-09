@@ -24,10 +24,10 @@ themeButtons.forEach((button) => {
 });
 
 function changeTheme(theme) {
-  document.body.className = 'page'; // Сбрасываем все классы и применяем базовый
-  document.body.classList.add(`theme_${theme}`); // Добавляем соответствующую тему
+  document.body.className = 'page';
+  document.body.classList.add(`theme_${theme}`);
 
-  localStorage.setItem('theme', theme); // Сохраняем тему в localStorage
+  localStorage.setItem('theme', theme); 
 }
 
 function initTheme() {
@@ -38,7 +38,6 @@ function initTheme() {
       btn.classList.remove('header__theme-menu-button_active');
       btn.removeAttribute('disabled');
     });
-    // Устанавливаем активную кнопку в зависимости от сохранённой темы
     document
       .querySelector(`.header__theme-menu-button_type_${theme}`)
       .classList.add('header__theme-menu-button_active');
@@ -48,4 +47,4 @@ function initTheme() {
   }
 }
 
-initTheme(); // Инициализация темы при загрузке страницы
+initTheme(); 
