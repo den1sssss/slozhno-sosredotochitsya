@@ -1,27 +1,31 @@
 .page.theme_light {
-  --cover-image: url(../images/cover-image-light.png);
-  --accent-clr: #ff8dcb;
-  --accent-clr-with-background: #353430;
-  --accent-heading-clr: #ffc2e6;
-  --text-clr: #353430;
-  --button-hover-clr: #32312d66;
-  --decorative-bracket-clr: #353430;
-  --menu-clr: #353430;
-  --rec-decoration-clr: transparent;
-  --heading-clr: #353430;
+  --tittle-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --decor-color: #353430;
+  --main-background-color: #fff1f7;
+  --main-text-color: #353430;
+  --par-title-color: #353430;
+  --hover-button-color: rgb(50, 49, 45, 0.4);
+  background-image: url('../images/cover-image-light.png');
+}
+
+.page.theme_light .decoration-text {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --cover-image: url(../images/cover-image-light.png);
-    --accent-clr: #ff8dcb;
-    --accent-clr-with-background: #353430;
-    --accent-heading-clr: #ffc2e6;
-    --text-clr: #353430;
-    --button-hover-clr: #32312d66;
-    --decorative-bracket-clr: #353430;
-    --menu-clr: #353430;
-    --rec-decoration-clr: transparent;
-    --heading-clr: #353430;
+  .page.theme_auto {
+    --tittle-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --decor-color: #353430;
+    --main-background-color: #fff1f7;
+    --main-text-color: #353430;
+    --par-title-color: #353430;
+    --hover-button-color: rgb(50, 49, 45, 0.4);
+    background-image: url('../images/cover-image-light.png');
   }
-}
+
+  .page.theme_auto .decoration-text {
+    display: none;
+  }
+} 

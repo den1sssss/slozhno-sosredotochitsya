@@ -6,18 +6,17 @@ themeButtons.forEach((button) => {
       btn.classList.remove('header__theme-menu-button_active');
       btn.removeAttribute('disabled');
     });
-
-    let theme = '';
-    if (button.classList.contains('header__theme-menu-button_type_light')) {
-      theme = 'light';
-    } else if (button.classList.contains('header__theme-menu-button_type_dark')) {
-      theme = 'dark';
+    if (
+      [...button.classList].includes('header__theme-menu-button_type_light')
+    ) {
+      changeTheme('light');
+    } else if (
+      [...button.classList].includes('header__theme-menu-button_type_dark')
+    ) {
+      changeTheme('dark');
     } else {
-      theme = 'auto';
+      changeTheme('auto');
     }
-
-    changeTheme(theme);
-
     button.classList.add('header__theme-menu-button_active');
     button.setAttribute('disabled', true);
   });
@@ -26,8 +25,7 @@ themeButtons.forEach((button) => {
 function changeTheme(theme) {
   document.body.className = 'page';
   document.body.classList.add(`theme_${theme}`);
-
-  localStorage.setItem('theme', theme); 
+  localStorage.setItem('theme', theme);
 }
 
 function initTheme() {
@@ -47,4 +45,4 @@ function initTheme() {
   }
 }
 
-initTheme(); 
+initTheme();

@@ -1,73 +1,9 @@
 .page.theme_dark {
-  --accent-clr: #ff0070;
-  --accent-clr-with-background: #000028;
-  --accent-heading-clr: #db00ff;
-  --text-clr: #f1b2ce;
-  --button-hover-clr: #ff007066;
-  --heading-clr: #ff0070;
-  --decorative-bracket-clr: #ff0070;
-  --menu-clr: #ff0070;
-  --headers-clr: #ff0070;
-  --rec-decoration-clr: #ff0070;
-  --cover-image: url(../images/cover-image-dark.png);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent-clr: #ff0070;
-    --accent-clr-with-background: #000028;
-    --accent-heading-clr: #db00ff;
-    --text-clr: #f1b2ce;
-    --button-hover-clr: #ff007066;
-    --heading-clr: #ff0070;
-    --decorative-bracket-clr: #ff0070;
-    --menu-clr: #ff0070;
-    --headers-clr: #ff0070;
-    --rec-decoration-clr: #ff0070;
-    --cover-image: url(../images/cover-image-dark.png);
-  }
-}
-
-/* Фоновые и текстовые стили для тёмной темы */
-body.theme_dark {
-  background-color: var(--accent-clr-with-background);
-  color: var(--text-clr);
-}
-
-/* Стили для кнопок */
-.header__theme-menu-button {
-  color: var(--accent-clr);
-  background-color: transparent;
-  border: 1px solid var(--accent-clr);
-}
-
-.header__theme-menu-button:hover {
-  background-color: var(--button-hover-clr);
-}
-
-/* Заголовки */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--accent-heading-clr);
-}
-
-/* Стили для декоративных элементов */
-.decorative-rec-icon {
-  color: var(--rec-decoration-clr);
-}
-
-/* Изображение для тёмной темы */
-.page.theme_dark .cover-image {
-  background-image: var(--cover-image);
-  background-size: cover;
-  background-position: center;
-}
-
-/* Тёмная тема для галереи */
-.gallery__img {
-  filter: brightness(0.8);
-  transition: filter 0.3s ease;
-}
-
-.gallery__img:hover {
-  filter: brightness(1);
+  --tittle-color: #db00ff;
+  --shadow-color: #ff0070;
+  --accent-color: #ff0070;
+  --decor-color: #ff0070;
+  --main-background-color: #000028;
+  --main-text-color: #f1b2ce;
+  --par-title-color: #000028;
 }
