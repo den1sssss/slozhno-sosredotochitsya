@@ -1,3 +1,5 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 .page {
   font-family: var(--main-font), monospace;
   font-size: var(--main-text-font-size);
@@ -37,14 +39,6 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-}
-
-.header::before,
-.header::after {
-  content: '';
-  display: block;
-  width: 25px;
-  height: 25px;
 }
 
 .header::before {
@@ -135,8 +129,16 @@
   margin-bottom: var(--paragraph-margin);
 }
 
-.Concentration,
-.Low-concentration,
+.Concentration {
+  display: flex;
+  flex-direction: column;
+}
+
+.Low-concentration {
+  display: flex;
+  flex-direction: column;
+}
+
 .Better-concentration {
   display: flex;
   flex-direction: column;
@@ -170,7 +172,7 @@
 }
 
 .footer {
-  padding: 0 var(--containers-side-margin) var(--containers-side-margin) var(--containers-side-margin);
+  padding: 0 var(--containers-side-margin) var(--containers-side-margin);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,15 +181,11 @@
   min-height: 668px;
 }
 
-.footer::before,
-.footer::after {
+.footer::before {
   content: '';
   display: block;
   width: 25px;
   height: 25px;
-}
-
-.footer::before {
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
   margin-top: var(--containers-side-margin);
@@ -195,6 +193,10 @@
 }
 
 .footer::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
   border-bottom: 1px solid var(--decor-color);
   border-left: 1px solid var(--decor-color);
   align-self: start;
@@ -232,7 +234,7 @@
   }
 
   .header {
-    padding-left: 0;
+    padding-left: 0px;
     min-height: 1024px;
   }
 
@@ -266,8 +268,7 @@
     width: 100%;
   }
 
-  .Concentration,
-  .Better-concentration {
+  .Concentration {
     display: grid;
     grid-template-columns: max-content 2fr;
   }
@@ -281,6 +282,11 @@
   .Low-concentration {
     display: flex;
     flex-direction: column;
+  }
+
+  .Better-concentration {
+    display: grid;
+    grid-template-columns: max-content 2fr;
   }
 
   .gallery-container {
