@@ -42,12 +42,20 @@
 }
 
 .header::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
   justify-self: end;
 }
 
 .header::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
   border-bottom: 1px solid var(--decor-color);
   border-left: 1px solid var(--decor-color);
   align-self: end;
@@ -111,7 +119,8 @@
 }
 
 .main {
-  padding: 0 var(--containers-side-margin);
+  padding-left: var(--containers-side-margin);
+  padding-right: var(--containers-side-margin);
   line-height: 23.4px;
 }
 
